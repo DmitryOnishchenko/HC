@@ -1,0 +1,4 @@
+LinkedList      - http://habrahabr.ru/post/127864/
+ArrayList       - http://habrahabr.ru/post/128269/
+HashMap         - http://habrahabr.ru/post/128017/
+LinkedHashMap   - http://habrahabr.ru/post/129037/
