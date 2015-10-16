@@ -1,8 +1,8 @@
 package com.hc.collections;
 
-import com.hc.collections.utils.AverageTimeBenchmark;
-import com.hc.collections.utils.BenchmarkUtils;
-import com.hc.collections.utils.TimeEnum;
+import com.hc.timebenchmark.AverageIntervalTimer;
+import com.hc.timebenchmark.TimeBenchmarkUtils;
+import com.hc.timebenchmark.TimeUnit;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,7 +19,7 @@ public class MainApp {
         ArrayList<Integer> list = new ArrayList<>();
         println("\t========== Benchmark for ArrayList ==========");
 
-        AverageTimeBenchmark time = BenchmarkUtils.createAverageTimeBenchmark(TimeEnum.MS);
+        AverageIntervalTimer time = TimeBenchmarkUtils.createAverageTimeBenchmark(TimeUnit.MS);
         println("1.\tAdd operation");
         time.start();
 
@@ -29,7 +29,7 @@ public class MainApp {
         }
 
         println("Added " + N + " elements for " + loops + " times : "
-                + time.getTime() + " " + time.getTimeEnum());
+                + time.getTime() + " " + time.getTimeUnit());
         println("Average time : " + time.getAverageTime());
     }
 

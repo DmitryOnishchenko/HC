@@ -1,15 +1,15 @@
-package com.hc.collections.utils;
+package com.hc.timebenchmark;
 
-public class AverageTimeBenchmark extends TimeBenchmark {
+public class AverageIntervalTimer extends IntervalTimer {
     private long n;
     private long averageTime;
 
-    public AverageTimeBenchmark() {
+    public AverageIntervalTimer() {
         super(null);
     }
 
-    public AverageTimeBenchmark(TimeEnum timeEnum) {
-        super(timeEnum);
+    public AverageIntervalTimer(TimeUnit timeUnit) {
+        super(timeUnit);
     }
 
     @Override
@@ -18,9 +18,7 @@ public class AverageTimeBenchmark extends TimeBenchmark {
         n++;
     }
 
-    @Override
     public void reset() {
-        super.reset();
         n = 0;
     }
 

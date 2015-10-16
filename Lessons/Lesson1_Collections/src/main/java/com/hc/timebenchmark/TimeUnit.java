@@ -1,6 +1,6 @@
-package com.hc.collections.utils;
+package com.hc.timebenchmark;
 
-public enum TimeEnum {
+public enum TimeUnit {
     SEC("sec", 1_000_000_000),
     MS("ms", 1_000_000),
     NANO("ns", 1);
@@ -8,7 +8,7 @@ public enum TimeEnum {
     private final String name;
     private final long scale;
 
-    TimeEnum(String name, long scale) {
+    TimeUnit(String name, long scale) {
         this.name = name;
         this.scale = scale;
     }
