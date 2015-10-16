@@ -1,14 +1,15 @@
 package com.hc.timebenchmark;
 
 public class TimeBenchmarkUtils {
+    public static String pattern = "### ### ### ### ###";
 
     private TimeBenchmarkUtils() {}
 
-    public static IntervalTimer createTimeBenchmark(TimeUnit timeUnit) {
-        return new IntervalTimer(timeUnit);
+    public static Timer createTimer(TimeUnit timeUnit) {
+        return new Timer(timeUnit);
     }
 
-    public static AverageIntervalTimer createAverageTimeBenchmark(TimeUnit timeUnit) {
-        return new AverageIntervalTimer(timeUnit);
+    public static MultipleTimer createMultipleTimer(TimeUnit timeUnit) {
+        return new MultipleTimer(timeUnit);
     }
 }

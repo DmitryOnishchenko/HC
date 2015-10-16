@@ -1,12 +1,16 @@
 package com.hc.timebenchmark;
 
-public class IntervalTimer {
+import com.google.common.base.Joiner;
+
+import java.text.NumberFormat;
+
+public class Timer {
     private TimeUnit timeUnit;
     private long start;
     private long end;
     private long time;
 
-    public IntervalTimer(TimeUnit timeUnit) {
+    public Timer(TimeUnit timeUnit) {
         if (timeUnit == null) {
             timeUnit = TimeUnit.NANO;
         }
@@ -29,6 +33,10 @@ public class IntervalTimer {
         return getTime(timeUnit);
     }
 
+    public String printTime() {
+        return NumberFormat.getNumberInstance().format(time);
+    }
+
     public long getTime(TimeUnit timeUnit) {
         long temp = time;
         if (timeUnit != null) {
@@ -48,5 +56,9 @@ public class IntervalTimer {
 
     private long getScaledTime(TimeUnit timeUnit) {
         return time / timeUnit.getScale();
+    }
+
+    public String report() {
+        return Joiner.on("").join("Time[", printTime(), "]");
     }
 }
